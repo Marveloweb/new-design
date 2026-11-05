@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400..700&family=Archivo:wght@700;800&family=Zilla+Slab:wght@600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="sample.css?v=8">
-<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="sample.css?v=9">
+<link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body data-page="redesign">
 <a class="skip" href="#main">Skip to content</a>
@@ -363,7 +363,7 @@
     <input type="hidden" name="plan" id="ask-plan">
     <button class="btn btn-big" type="submit">Request my free preview</button>
     <p class="status" id="ask-status" role="status"></p>
-    <p class="consent"><span class="req" aria-hidden="true">*</span> Required. By sending this, you agree to our <a href="#terms" data-open="terms-box">terms</a> and <a href="#terms" data-open="privacy-box">privacy notice</a>.</p>
+    <p class="consent"><span class="req" aria-hidden="true">*</span> Required. By sending this, you agree to our <a href="terms.html" target="_blank" rel="noopener">terms</a> and <a href="privacy.html" target="_blank" rel="noopener">privacy policy</a>.</p>
   </form>
 </section>
 
@@ -406,8 +406,8 @@
     <nav class="foot-col" aria-label="Legal">
       <h3>Legal</h3>
       <ul>
-        <li><a href="#terms" data-open="terms-box">Terms and conditions</a></li>
-        <li><a href="#privacy" data-open="privacy-box">Privacy notice</a></li>
+        <li><a href="terms.html">Terms and conditions</a></li>
+        <li><a href="privacy.html">Privacy policy</a></li>
       </ul>
     </nav>
   </div>
@@ -418,52 +418,9 @@
   </div>
 </footer>
 
-<dialog class="legal-dialog" id="terms-box" aria-labelledby="terms-title">
-  <div class="legal-head"><h2 id="terms-title">Terms and conditions</h2><form method="dialog"><button class="legal-close" aria-label="Close terms">✕</button></form></div>
-  <div class="legal-text">
-      <p>Last updated: <mark>[Date]</mark>. These terms apply when you request a preview from, or hire, MarveloWeb, run by <mark>[Founder's legal name]</mark> ("we", "us"). By sending a request or approving a preview, you agree to them.</p>
-      <h3>1. Free preview</h3>
-      <p>We offer one free preview per business, with no obligation. A preview is a sample, and it stays private. It may use public details about your business and licensed stock photos. We may remove a preview 30 days after we send it unless you ask us to keep it. We can decline a request.</p>
-      <h3>2. Your plan and price</h3>
-      <p>Plan prices are one-time, in US dollars, and cover what the plan lists on our Plans page when you approve your preview. We quote anything extra before we do it, and it only goes ahead with your agreement.</p>
-      <h3>3. Payment</h3>
-      <p>You pay 50% when you approve your preview and 50% before your site goes live. We send an invoice link for each payment. Work starts after the first payment, and the site goes live after the second.</p>
-      <h3>4. Refunds</h3>
-      <p>If we can't deliver what your approved preview shows, we refund your deposit. If you cancel after work has started for any other reason, we refund the part of your deposit that doesn't cover work already done. Once your site is live and fully paid, the price isn't refundable.</p>
-      <h3>5. Domain and hosting</h3>
-      <p>Domain and hosting are not included in the plan price and are charged to the client. Your domain is registered in your name. We'll tell you the cost before you approve anything.</p>
-      <h3>6. Who owns the site</h3>
-      <p>Once you've paid in full, you own your site's text, design and files, except third-party items such as stock photos, fonts and tools, which stay under their own licenses. We hand over your files when you ask. We may show your site in our portfolio only with your written permission.</p>
-      <h3>7. Your content</h3>
-      <p>You confirm that the details, photos and other content you give us are accurate and that you have the right to use them. You're responsible for meeting the licensing and other rules of your trade.</p>
-      <h3>8. Changes</h3>
-      <p>Each plan includes the rounds of changes it lists. Growth includes unlimited changes for the first 30 days after launch. Other changes are quoted first or covered by a monthly care plan.</p>
-      <h3>9. Monthly services</h3>
-      <p>Monthly care and monthly SEO are optional. They run month to month, and you can stop them at any time. If you stop monthly care, edits and updates stop, and you keep your site.</p>
-      <h3>10. No guarantees of results</h3>
-      <p>We don't promise any search ranking, number of calls, or amount of revenue. Search engines and other third-party services are outside our control.</p>
-      <h3>11. Limit of liability</h3>
-      <p>To the extent the law allows, our total liability for any claim is limited to the amount you paid us for the work concerned, and we aren't liable for lost profits or indirect losses. Nothing here removes rights that the law says can't be removed.</p>
-      <h3>12. Governing law</h3>
-      <p>These terms are governed by the laws of <mark>[Governing law]</mark>. Any dispute goes first to a good-faith conversation between us, then to the courts of <mark>[Courts]</mark>.</p>
-      <h3>13. Changes to these terms</h3>
-      <p>We may update these terms and will change the date above. The terms in place when you approve your preview apply to your project.</p>
-      <h3>14. Contact</h3>
-      <p><mark>[Email address]</mark>, <mark>[Postal address]</mark>.</p>
-    </div>
-</dialog>
-<dialog class="legal-dialog" id="privacy-box" aria-labelledby="privacy-title">
-  <div class="legal-head"><h2 id="privacy-title">Privacy notice</h2><form method="dialog"><button class="legal-close" aria-label="Close privacy notice">✕</button></form></div>
-  <div class="legal-text">
-      <p>When you send a request, we collect what you enter in the form: your name, business name, trade, town, phone, email and website. We use it to build your preview and to contact you about it.</p>
-      <p>We keep requests for 1 year and then delete them. To see or delete your details, email <mark>[Email address]</mark>. We don't sell your details. We share them only with the services that run this website.</p>
-      <p>If we email you first, you can reply "no thanks" and we won't contact you again.</p>
-    </div>
-</dialog>
-
 <div class="sticky-cta"><a class="btn" href="contact.html#start">Get my free preview</a></div>
 
-<script src="sample.js?v=8"></script>
-<script src="app.js?v=8"></script>
+<script src="sample.js?v=9"></script>
+<script src="app.js?v=9"></script>
 </body>
 </html>

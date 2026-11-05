@@ -398,16 +398,16 @@ section { padding: clamp(64px, 8vw, 120px) var(--gutter); }
 .foot-base a:hover { color: var(--on-dark); }
 
 /* Terms and privacy open from the footer on every page */
-.legal-dialog { width: min(760px, calc(100vw - 28px)); max-height: 86svh; padding: 0; overflow: hidden; border: 2px solid var(--ink); border-radius: var(--r-l); background: var(--surface); color: var(--ink); box-shadow: 8px 8px 0 var(--accent); }
-.legal-dialog[open] { display: flex; flex-direction: column; }
-.legal-dialog::backdrop { background: rgba(15, 15, 18, .62); }
-.legal-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; border-bottom: 2px solid var(--ink); }
-.legal-head h2 { font-size: 26px; }
-.legal-close { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border: 2px solid var(--ink); border-radius: 50%; background: var(--paper); color: var(--ink); font: 700 18px/1 var(--body); cursor: pointer; transition: background .18s var(--ease); }
-.legal-close:hover { background: var(--accent); }
-.legal-text { padding: 18px 22px 24px; overflow-y: auto; font-size: 15.5px; line-height: 1.55; }
-.legal-text h3 { margin-top: 18px; font: 700 16.5px/1.3 var(--body); letter-spacing: 0; }
-.legal-text p { margin-top: 6px; }
+.legal-text { max-width: 68ch; margin-top: 28px; font-size: 17px; line-height: 1.6; }
+.legal-text h2 { margin-top: 30px; font: 700 20px/1.3 var(--body); letter-spacing: 0; }
+.legal-text p { margin-top: 8px; }
+.legal-text ul { margin-top: 8px; padding-left: 22px; }
+.legal-text li { margin-top: 6px; }
+.legal-text a, .legal-id a { color: var(--accent-deep); }
+.legal-page { background: var(--paper); }
+.legal-page h1 { font-size: clamp(38px, 6vw, 64px); }
+.legal-date { margin-top: 12px; color: var(--muted); }
+.legal-id { padding-top: 28px; padding-bottom: 28px; background: var(--mist); font-size: 16px; }
 .legal-text p:first-child { margin-top: 0; }
 
 .sticky-cta { display: none; }
@@ -745,10 +745,10 @@ section { padding: clamp(64px, 8vw, 120px) var(--gutter); }
 
 /* ----- Light gradients, using only the brand's own pink and paper ----- */
 :root {
-  --grad-paper: linear-gradient(135deg, #FFF0F5 0%, #F4F1EA 46%, #F4F1EA 62%, #FFE4ED 100%);
-  --grad-mist: linear-gradient(160deg, #EAE5DA 0%, #F8E6E8 100%);
-  --grad-btn: linear-gradient(135deg, #FF3D7F 0%, #FF7BA8 100%);
-  --grad-btn-hover: linear-gradient(135deg, #FF5C93 0%, #FF3D7F 100%);
+  --grad-paper: linear-gradient(135deg, #F8F3EE 0%, #F4F1EA 42%, #F4F1EA 68%, #F8EFEA 100%);
+  --grad-mist: linear-gradient(160deg, #EAE5DA 0%, #EEE6DD 100%);
+  --grad-btn: linear-gradient(135deg, #FF3D7F 0%, #FF5A92 100%);
+  --grad-btn-hover: linear-gradient(135deg, #FF4D8A 0%, #FF3D7F 100%);
 }
 .hero, .page-hero { background: var(--grad-paper); }
 .plans-hero { background: var(--ink); }

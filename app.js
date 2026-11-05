@@ -115,15 +115,6 @@
     });
   }
 
-  // ----- Terms and privacy links open their section -----
-  $$("[data-open]").forEach((link) => {
-    link.addEventListener("click", (e) => { e.preventDefault(); $("#" + link.dataset.open).showModal(); });
-  });
-  $$(".legal-dialog").forEach((dialog) => {
-    dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
-  });
-  if (location.hash === "#terms") $("#terms-box").showModal();
-  if (location.hash === "#privacy") $("#privacy-box").showModal();
   // Social profiles aren't live yet, so these buttons stay on the page
   $$("[data-social]").forEach((link) => link.addEventListener("click", (e) => e.preventDefault()));
 
