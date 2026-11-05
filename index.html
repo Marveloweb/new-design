@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MarveloWeb: see your website before you pay</title>
+<meta name="description" content="Websites for US local service businesses. See a free preview of your own site first, then pay a fixed one-time price. You own everything.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F0F12'/%3E%3Cpath d='M16 5l2.6 8.4L27 16l-8.4 2.6L16 27l-2.6-8.4L5 16l8.4-2.6z' fill='%23FF3D7F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400..700&family=Archivo:wght@700;800&family=Zilla+Slab:wght@600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sample.css?v=7">
+<link rel="stylesheet" href="styles.css?v=7">
+</head>
+<body data-page="index">
+<a class="skip" href="#main">Skip to content</a>
+<header class="head">
+  <a class="mark" href="index.html" aria-label="MarveloWeb home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.9 8.1L23 12l-8.1 2.9L12 23l-2.9-8.1L1 12l8.1-2.9z"/></svg><span>marvelo<b>web</b></span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="new-website.html" data-nav="new-website">Pre-built templates</a>
+    <a href="redesign.html" data-nav="redesign">Improve my website</a>
+    <a href="plans.html" data-nav="plans">Plans</a>
+  </nav>
+  <a class="btn btn-small" href="contact.html#start">Get my free preview</a>
+  <details class="menu">
+    <summary aria-label="Open menu"><i></i><i></i><i></i></summary>
+    <div class="menu-panel">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="new-website.html" data-nav="new-website">Pre-built templates</a>
+      <a href="redesign.html" data-nav="redesign">Improve my website</a>
+      <a href="plans.html" data-nav="plans">Plans</a>
+      <a class="btn" href="contact.html#start">Get my free preview</a>
+    </div>
+  </details>
+</header>
+
+<main id="main">
+<div class="hero-run" id="hero-run">
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <h1>See your website <em>before</em> you pay.</h1>
+    <p class="lede">We build a preview of your own site first. Like it? Hire us at a fixed price, and you own everything. Don't like it? You owe nothing.</p>
+
+    <form class="builder" id="builder" aria-label="Start your free preview">
+      <div class="two">
+        <label>Business name<input id="try-name" type="text" maxlength="40" placeholder="Your business" autocomplete="organization"></label>
+        <label>Town<input id="try-town" type="text" maxlength="24" placeholder="Your town" autocomplete="address-level2"></label>
+        <label>Your trade<input id="try-trade" type="text" maxlength="40" placeholder="Plumber, clinic, salon" autocomplete="off"></label>
+        <label>Email<input id="try-email" type="email" maxlength="80" placeholder="you@company.com" autocomplete="email"></label>
+      </div>
+      <button class="btn btn-big" id="try-go" type="submit">Get my free preview</button>
+    </form>
+    <ul class="proof-row">
+      <li>No card needed</li>
+      <li>Fixed price</li>
+      <li>You own it</li>
+    </ul>
+  </div>
+
+  <div class="ring-wrap">
+    <div class="ring-stage" id="ring-stage">
+      <div class="ring" id="ring"></div>
+      <i class="phone-slot" id="phone-slot"></i>
+    </div>
+  </div>
+
+  <div class="fly-backdrop" id="fly-backdrop"></div>
+  <div class="fly-notes" id="fly-notes" aria-hidden="true">
+    <div class="fly-lead">
+      <p>This is what customers see <em>on their phones.</em></p>
+      <small>Sample site for a made-up business. An illustration, not a promise of calls.</small>
+    </div>
+    <ol class="fly-points" id="fly-points">
+      <li>Your name and town at the top</li>
+      <li>One tap to call you</li>
+      <li>A short quote form that alerts you</li>
+      <li>Then your phone rings</li>
+    </ol>
+  </div>
+  <div class="hero-phone" id="hero-phone" aria-hidden="true"><i class="phone-notch"></i><div class="phone-screen"><div id="phone-site"></div><div class="phone-call" id="phone-call"><small>Incoming call</small><b>New customer</b><span>Found you on your website</span><u><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></u></div></div></div>
+  <svg class="hero-cursor" id="hero-cursor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2.5l14 11.2-6.6.9 3.9 6.9-3 1.7-3.9-7L5 20.3z"/></svg>
+</section>
+</div>
+
+<section class="build" id="build" aria-labelledby="build-title">
+  <div class="build-sticky">
+    <div class="build-copy">
+      <h2 id="build-title">Every page is built to make the phone <em>ring</em></h2>
+      <p class="build-meter"><span id="build-count">Step 1 of 5</span><i id="build-bar"></i></p>
+      <ol class="build-steps" id="build-steps">
+        <li data-n="1"><b>A clear headline</b><p>Your trade and town, so people know in a second they're in the right place.</p></li>
+        <li data-n="2"><b>A call button that's easy to tap</b><p>One tap to call you, on any phone.</p></li>
+        <li data-n="3"><b>A quote form that alerts you</b><p>Short enough to finish, and every request comes straight to you.</p></li>
+        <li data-n="4"><b>Services, hours and reviews</b><p>What you do, when you're open, and what your customers say.</p></li>
+        <li data-n="5"><b>Your Google Business Profile</b><p>Set up, so nearby customers can find you and call.</p></li>
+      </ol>
+    </div>
+    <div class="build-stage" aria-hidden="true">
+      <div class="build-rig" id="build-rig">
+        <div class="mock">
+          <div class="mock-bar"><i></i><i></i><i></i><span>riveraplumbing.com</span></div>
+          <div class="slot" style="left:26px;top:100px;width:370px;height:130px"></div>
+          <div class="slot" style="left:26px;top:260px;width:210px;height:50px"></div>
+          <div class="slot" style="right:24px;top:96px;width:222px;height:196px"></div>
+          <div class="slot" style="left:16px;right:16px;bottom:14px;height:92px"></div>
+          <div class="ly ly-nav" data-step="1"><b>Rivera Plumbing</b><span>Services</span><span>About</span><span>Reviews</span></div>
+          <div class="ly ly-bg" data-step="1"></div>
+          <div class="ly ly-head" data-step="1">Fast, honest plumbing in Dallas</div>
+          <div class="ly ly-call" data-step="2">Call (555) 010-0100</div>
+          <div class="ly ly-form" data-step="3"><b>Get a free quote</b><i></i><i></i><u>Send my request</u></div>
+          <div class="ly ly-services" data-step="4"><span>Leaks and drains<small>Fixed the same day</small></span><span>Water heaters<small>Repairs and installs</small></span><span>★★★★★<small>Your Google reviews</small></span></div>
+        </div>
+        <div class="ly ly-google" data-step="5"><b>Rivera Plumbing</b><span><em>Open now.</em> Plumber in Dallas</span><u>Call</u><u>Website</u></div>
+        <div class="ly ly-ring" data-step="5"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span><b>Your phone rings</b>A new customer found you</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how" aria-labelledby="how-title">
+  <h2 id="how-title">You only pay after you've seen it</h2>
+  <ol class="pay-steps">
+    <li class="pay-a"><strong class="paid">$0</strong><h3>Tell us about your business</h3><p>Two minutes, no card.</p></li>
+    <li class="pay-b"><strong class="paid">$0</strong><h3>See your preview</h3><p>A private link, within 5 business days.</p></li>
+    <li class="pay-c"><strong class="paid">50%</strong><h3>Approve it</h3><p>Pay half, and we finish your site.</p></li>
+    <li class="pay-d"><strong class="paid">100%</strong><h3>Go live</h3><p>Check it, pay the rest, and it's live on your domain.</p></li>
+    <li class="pay-e"><strong class="paid">Free</strong><h3>90-day check-in</h3><p>We review your calls, Google profile and reviews with you.</p></li>
+  </ol>
+</section>
+
+<section class="plans" id="plans" aria-labelledby="plans-title">
+  <h2 id="plans-title">Four plans. One-time prices.</h2>
+  <div class="plan-switch">
+  <label for="plan-type">Show plans for</label>
+  <select id="plan-type">
+    <option value="new">A new website</option>
+    <option value="redesign">Improving my existing website</option>
+  </select>
+</div>
+<div class="plan-set" data-plan-set="new">
+<div class="plan-grid">
+  <article class="plan plan-micro">
+    <h3>Micro</h3>
+    <p class="plan-size">1 page</p>
+    <p class="price">$999 <small>one time</small></p>
+    <p class="for">One page that gets you found and gets you called.</p>
+    <ul>
+      <li>1 phone-first page</li>
+      <li>Click-to-call and quote form</li>
+      <li>Services, area, hours and reviews</li>
+      <li>Basic SEO</li>
+      <li>Google Business Profile setup</li>
+      <li>1 round of changes</li>
+    </ul>
+    <a class="btn btn-ink" href="contact.html?plan=Micro#start">Start with Micro</a>
+  </article>
+  <article class="plan plan-best">
+    <span class="tag">Best value</span>
+    <h3>Starter</h3>
+    <p class="plan-size">Up to 5 pages</p>
+    <p class="price">$2,500 <small>one time</small></p>
+    <p class="for">A full small site that shows your work.</p>
+    <ul>
+      <li>Everything in Micro</li>
+      <li>Up to 5 pages: home, about, services, work, contact</li>
+      <li>Basic SEO on every page</li>
+      <li>Photo gallery and Google map</li>
+      <li>Google Analytics setup</li>
+      <li>2 rounds of changes</li>
+    </ul>
+    <a class="btn" href="contact.html?plan=Starter#start">Start with Starter</a>
+  </article>
+  <article class="plan">
+    <h3>Growth</h3>
+    <p class="plan-size">About 15 pages</p>
+    <p class="price">$3,799 <small>one time</small></p>
+    <p class="for">A page for each service and town you want to win.</p>
+    <ul>
+      <li>Everything in Starter</li>
+      <li>Up to about 15 pages, by service and town</li>
+      <li>Initial SEO setup: keywords, page tags, business schema, sitemap</li>
+      <li>Search Console and Bing setup</li>
+      <li>Call and form click tracking</li>
+      <li>Online booking</li>
+      <li>Google profile tune-up</li>
+      <li>Review link with QR code</li>
+      <li>30 days of free changes</li>
+    </ul>
+    <a class="btn btn-ink" href="contact.html?plan=Growth#start">Start with Growth</a>
+  </article>
+  <article class="plan plan-custom">
+    <h3>Custom</h3>
+    <p class="plan-size">As many as you need</p>
+    <p class="price">Quote</p>
+    <p class="for">For more than one location, or special needs.</p>
+    <ul>
+      <li>Everything in Growth</li>
+      <li>Multiple locations</li>
+      <li>Online payments</li>
+      <li>Connections to your tools</li>
+      <li>Priority support</li>
+    </ul>
+    <a class="btn btn-ink" href="contact.html?plan=Custom#start">Ask for a quote</a>
+  </article>
+</div>
+  <ul class="plan-assure">
+    <li>Free preview on every plan</li>
+    <li>Pay half after you approve it</li>
+    <li>Upgrade credit for 12 months</li>
+  </ul>
+</div>
+<div class="plan-set" data-plan-set="redesign" hidden>
+<div class="plan-grid">
+  <article class="plan">
+    <h3>One-Page Refresh</h3>
+    <p class="plan-size">1 page</p>
+    <p class="price">$999 <small>one time</small></p>
+    <p class="for">Turn an old site into one page that gets calls.</p>
+    <ul>
+      <li>1 phone-first page</li>
+      <li>Your content rewritten clearly</li>
+      <li>Click-to-call and quote form</li>
+      <li>Old links sent to the new page</li>
+      <li>Basic SEO</li>
+      <li>1 round of changes</li>
+    </ul>
+    <a class="btn btn-ink" href="contact.html?plan=One-Page%20Refresh#start">Start my refresh</a>
+  </article>
+  <article class="plan plan-best">
+    <span class="tag">Best value</span>
+    <h3>Small Site Rebuild</h3>
+    <p class="plan-size">Up to 5 pages</p>
+    <p class="price">$1,999 <small>one time</small></p>
+    <p class="for">A new design for a site of up to 5 pages.</p>
+    <ul>
+      <li>Everything in One-Page Refresh</li>
+      <li>Up to 5 pages rebuilt</li>
+      <li>Photo gallery and Google map</li>
+      <li>Page-by-page redirects</li>
+      <li>Google Analytics setup</li>
+      <li>2 rounds of changes</li>
+    </ul>
+    <a class="btn" href="contact.html?plan=Small%20Site%20Rebuild#start">Start my rebuild</a>
+  </article>
+  <article class="plan">
+    <h3>Full Site Rebuild</h3>
+    <p class="plan-size">About 15 pages</p>
+    <p class="price">$3,299 <small>one time</small></p>
+    <p class="for">Rebuild a bigger site and win more towns.</p>
+    <ul>
+      <li>Everything in Small Site Rebuild</li>
+      <li>Up to about 15 pages, by service and town</li>
+      <li>SEO setup carried over and improved</li>
+      <li>Search Console and Bing setup</li>
+      <li>Call and form click tracking</li>
+      <li>Online booking</li>
+      <li>Review link with QR code</li>
+      <li>30 days of free changes</li>
+    </ul>
+    <a class="btn btn-ink" href="contact.html?plan=Full%20Site%20Rebuild#start">Start my rebuild</a>
+  </article>
+  <article class="plan">
+    <h3>Custom</h3>
+    <p class="plan-size">More than 15 pages</p>
+    <p class="price">Quote</p>
+    <p class="for">For large sites, several locations or online stores.</p>
+    <ul>
+      <li>Everything in Full Site Rebuild</li>
+      <li>More than 15 pages</li>
+      <li>Multiple locations</li>
+      <li>Online payments</li>
+      <li>Connections to your tools</li>
+    </ul>
+    <a class="btn btn-ink" href="contact.html?plan=Custom%20Redesign#start">Ask for a quote</a>
+  </article>
+</div>
+  <ul class="plan-assure">
+    <li>Free redesign on every plan</li>
+    <li>Pay half after you approve it</li>
+    <li>Your old site stays up until then</li>
+  </ul>
+</div>
+<p class="plan-note">Domain and hosting are not included in the plan price and are charged to the client.</p>
+
+  <p class="center-link"><a href="plans.html">Compare every plan in detail</a></p>
+</section>
+
+<section class="fears" aria-labelledby="fears-title">
+  <h2 id="fears-title">Been burned by a web designer?</h2>
+  <p class="section-sub">These are the complaints owners post about designers. Flip any card to see how we handle it.</p>
+  <div class="flip-grid">
+    <button class="flip" type="button"><span class="flip-in"><span class="face front"><b>"I paid, then they stopped answering."</b><em class="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/></svg><span class="hint-mouse">Click to see our answer</span><span class="hint-touch">Tap to see our answer</span></em></span><span class="face back"><b>You see it first.</b>You pay nothing until you've seen your site. If we can't deliver what your approved preview shows, your deposit comes back.<em class="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/></svg><span class="hint-mouse">Click to flip back</span><span class="hint-touch">Tap to flip back</span></em></span></span></button>
+    <button class="flip" type="button"><span class="flip-in"><span class="face front"><b>"I can't get out of the contract."</b><em class="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/></svg><span class="hint-mouse">Click to see our answer</span><span class="hint-touch">Tap to see our answer</span></em></span><span class="face back"><b>No lock-in.</b>You pay one time, with no long-term contract. Monthly care is optional, and you can stop it and keep your site.<em class="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/></svg><span class="hint-mouse">Click to flip back</span><span class="hint-touch">Tap to flip back</span></em></span></span></button>
+    <button class="flip" type="button"><span class="flip-in"><span class="face front"><b>"They control my site."</b><em class="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/></svg><span class="hint-mouse">Click to see our answer</span><span class="hint-touch">Tap to see our answer</span></em></span><span class="face back"><b>It's yours.</b>Your domain is in your name, and you get your site files whenever you ask.<em class="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/></svg><span class="hint-mouse">Click to flip back</span><span class="hint-touch">Tap to flip back</span></em></span></span></button>
+    <button class="flip" type="button"><span class="flip-in"><span class="face front"><b>"The price kept growing."</b><em class="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/></svg><span class="hint-mouse">Click to see our answer</span><span class="hint-touch">Tap to see our answer</span></em></span><span class="face back"><b>One fixed price.</b>We quote anything extra before we do it, and you can say no.<em class="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/></svg><span class="hint-mouse">Click to flip back</span><span class="hint-touch">Tap to flip back</span></em></span></span></button>
+    <button class="flip" type="button"><span class="flip-in"><span class="face front"><b>"I didn't know who I was dealing with."</b><em class="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/></svg><span class="hint-mouse">Click to see our answer</span><span class="hint-touch">Tap to see our answer</span></em></span><span class="face back"><b>One real person.</b>You get a named person and a direct way to reach them, with replies within one business day.<em class="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/></svg><span class="hint-mouse">Click to flip back</span><span class="hint-touch">Tap to flip back</span></em></span></span></button>
+    <a class="flip-cta" href="#start"><b>Ready to see yours?</b><span class="btn">Get my free preview</span></a>
+  </div>
+</section>
+
+<section class="calc" data-calc aria-labelledby="calc-title">
+  <div>
+    <h2 id="calc-title">How many jobs until it pays for itself?</h2>
+    <label class="calc-label" for="calc-range">What you make on a typical job: <output id="calc-profit">$300</output></label>
+    <input class="calc-range" id="calc-range" type="range" min="50" max="2000" step="50" value="300">
+    <div class="calc-plans" role="radiogroup" aria-label="Plan">
+      <label><input type="radio" name="calc-plan" value="999" data-name="Micro" checked><span>Micro</span></label>
+      <label><input type="radio" name="calc-plan" value="2500" data-name="Starter"><span>Starter</span></label>
+      <label><input type="radio" name="calc-plan" value="3799" data-name="Growth"><span>Growth</span></label>
+    </div>
+  </div>
+  <div class="calc-result">
+    <p class="calc-number" id="calc-number">4</p>
+    <p id="calc-text">jobs to pay for Micro</p>
+    <small>This is math on your own numbers, not a promise of new jobs.</small>
+  </div>
+</section>
+
+<!-- Hidden until we have real client websites to show. Remove these comment lines to bring it back.
+<section class="honest" aria-labelledby="honest-title">
+  <h2 id="honest-title">We don't have client reviews yet.</h2>
+  <p>We're new, and we won't make reviews up. Judge us by the preview of your own website, which costs you nothing. We also won't promise first place on Google, because nobody can honestly promise that.</p>
+</section>
+-->
+
+<section class="ask" id="start" aria-labelledby="ask-title">
+  <div class="ask-copy">
+    <h2 id="ask-title">See your website first. It's free.</h2>
+    <ul class="ticks">
+      <li>No card and no obligation</li>
+      <li>Made for your business, on a private link</li>
+      <li>Sent to you within 5 business days</li>
+    </ul>
+  </div>
+  <!-- Design stage: not connected. Point this at the Worker's /enhance route, with Turnstile, before launch. -->
+  <form class="ask-form" id="ask" novalidate>
+    <div class="two">
+      <label>Business name <i class="req" aria-hidden="true">*</i><input name="business" id="ask-business" required autocomplete="organization" data-err="Enter your business name."></label>
+      <label>Your name <i class="req" aria-hidden="true">*</i><input name="name" required autocomplete="name" data-err="Enter your name."></label>
+    </div>
+    <div class="two">
+      <label>Your trade <i class="req" aria-hidden="true">*</i><input name="trade" id="ask-trade" required maxlength="40" placeholder="Plumber, clinic, salon" autocomplete="off" data-err="Enter your trade, such as plumber or clinic."></label>
+      <label>Town <i class="req" aria-hidden="true">*</i><input name="town" id="ask-town" required autocomplete="address-level2" data-err="Enter your town."></label>
+    </div>
+    <div class="two">
+      <label>Email <i class="req" aria-hidden="true">*</i><input name="email" id="ask-email" type="email" required placeholder="you@company.com" autocomplete="email" data-err="Enter an email like you@company.com."></label>
+      <label>Phone <i class="req" aria-hidden="true">*</i><input name="phone" id="ask-phone" type="tel" required placeholder="(555) 010-0100" autocomplete="tel" data-err="Enter your phone number with area code."></label>
+    </div>
+    <label><span id="ask-website-label">Your website, if you have one</span><input name="website" id="ask-website" type="text" inputmode="url" placeholder="yourcompany.com" autocomplete="url" autocapitalize="off" spellcheck="false" data-err="Enter your website like yourcompany.com."></label>
+    <input type="hidden" name="plan" id="ask-plan">
+    <button class="btn btn-big" type="submit">Send me my free preview</button>
+    <p class="status" id="ask-status" role="status"></p>
+    <p class="consent"><span class="req" aria-hidden="true">*</span> Required. By sending this, you agree to our <a href="#terms" data-open="terms-box">terms</a> and <a href="#terms" data-open="privacy-box">privacy notice</a>.</p>
+  </form>
+</section>
+
+
+</main>
+<footer class="foot">
+  <div class="foot-cta">
+    <p>Websites people <em>marvel</em> at.</p>
+    <a class="btn btn-big" href="contact.html#start">Get my free preview</a>
+  </div>
+  <div class="foot-cols">
+    <div class="foot-brand">
+      <a class="mark" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.9 8.1L23 12l-8.1 2.9L12 23l-2.9-8.1L1 12l8.1-2.9z"/></svg><span>marvelo<b>web</b></span></a>
+      <p class="foot-about">Websites for US local service businesses. See yours before you pay, at a fixed price, and own everything.</p>
+      <!-- Add the real profile links here once the accounts are live -->
+      <div class="foot-social">
+        <a href="#" data-social aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V5h-3c-2.8 0-5 2.2-5 5v2H6v4h3v6h4v-6h3l1-4h-4v-2c0-.6.4-1 1-1z"/></svg></a>
+        <a href="#" data-social aria-label="Instagram"><svg class="line" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></svg></a>
+        <a href="#" data-social aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5H3V21h3.5zM4.75 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM21 21h-3.5v-6.2c0-1.6-.6-2.6-1.9-2.6-1.4 0-2.1 1-2.1 2.6V21H10V8.5h3.4v1.7c.6-1 1.8-2 3.6-2 2.6 0 4 1.7 4 4.9z"/></svg></a>
+        <a href="#" data-social aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.5 12 5.5 12 5.5s-6 0-7.9.6A3 3 0 0 0 2 8.2 31 31 0 0 0 1.5 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.6 7.9.6 7.9.6s6 0 7.9-.6a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-3.8 31 31 0 0 0-.5-3.8zM10 15V9l5.2 3z"/></svg></a>
+        <a href="#" data-social aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h4.6l4 5.6L17.4 3H20l-6.2 7.2L21 21h-4.6l-4.4-6.2L6.7 21H4l6.8-7.9z"/></svg></a>
+      </div>
+    </div>
+    <nav class="foot-col" aria-label="Services">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="new-website.html">Pre-built templates</a></li>
+        <li><a href="redesign.html">Improve my website</a></li>
+        <li><a href="plans.html">Plans and prices</a></li>
+        <li><a href="new-website.html#samples">Sample sites</a></li>
+      </ul>
+    </nav>
+    <nav class="foot-col" aria-label="Get in touch">
+      <h3>Get in touch</h3>
+      <ul>
+        <li><a href="contact.html#start">Get a free preview</a></li>
+        <li><a href="mailto:info@marveloweb.com">info@marveloweb.com</a></li>
+      </ul>
+    </nav>
+    <nav class="foot-col" aria-label="Legal">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="#terms" data-open="terms-box">Terms and conditions</a></li>
+        <li><a href="#privacy" data-open="privacy-box">Privacy notice</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="foot-word" aria-hidden="true"><span>marveloweb</span><svg viewBox="0 0 24 24"><path d="M12 1l2.9 8.1L23 12l-8.1 2.9L12 23l-2.9-8.1L1 12l8.1-2.9z"/></svg></div>
+  <div class="foot-base">
+    <p>© 2026 MarveloWeb. All rights reserved.</p>
+    <a href="#main">Back to top</a>
+  </div>
+</footer>
+
+<dialog class="legal-dialog" id="terms-box" aria-labelledby="terms-title">
+  <div class="legal-head"><h2 id="terms-title">Terms and conditions</h2><form method="dialog"><button class="legal-close" aria-label="Close terms">✕</button></form></div>
+  <div class="legal-text">
+      <p>Last updated: <mark>[Date]</mark>. These terms apply when you request a preview from, or hire, MarveloWeb, run by <mark>[Founder's legal name]</mark> ("we", "us"). By sending a request or approving a preview, you agree to them.</p>
+      <h3>1. Free preview</h3>
+      <p>We offer one free preview per business, with no obligation. A preview is a sample, and it stays private. It may use public details about your business and licensed stock photos. We may remove a preview 30 days after we send it unless you ask us to keep it. We can decline a request.</p>
+      <h3>2. Your plan and price</h3>
+      <p>Plan prices are one-time, in US dollars, and cover what the plan lists on our Plans page when you approve your preview. We quote anything extra before we do it, and it only goes ahead with your agreement.</p>
+      <h3>3. Payment</h3>
+      <p>You pay 50% when you approve your preview and 50% before your site goes live. We send an invoice link for each payment. Work starts after the first payment, and the site goes live after the second.</p>
+      <h3>4. Refunds</h3>
+      <p>If we can't deliver what your approved preview shows, we refund your deposit. If you cancel after work has started for any other reason, we refund the part of your deposit that doesn't cover work already done. Once your site is live and fully paid, the price isn't refundable.</p>
+      <h3>5. Domain and hosting</h3>
+      <p>Domain and hosting are not included in the plan price and are charged to the client. Your domain is registered in your name. We'll tell you the cost before you approve anything.</p>
+      <h3>6. Who owns the site</h3>
+      <p>Once you've paid in full, you own your site's text, design and files, except third-party items such as stock photos, fonts and tools, which stay under their own licenses. We hand over your files when you ask. We may show your site in our portfolio only with your written permission.</p>
+      <h3>7. Your content</h3>
+      <p>You confirm that the details, photos and other content you give us are accurate and that you have the right to use them. You're responsible for meeting the licensing and other rules of your trade.</p>
+      <h3>8. Changes</h3>
+      <p>Each plan includes the rounds of changes it lists. Growth includes unlimited changes for the first 30 days after launch. Other changes are quoted first or covered by a monthly care plan.</p>
+      <h3>9. Monthly services</h3>
+      <p>Monthly care and monthly SEO are optional. They run month to month, and you can stop them at any time. If you stop monthly care, edits and updates stop, and you keep your site.</p>
+      <h3>10. No guarantees of results</h3>
+      <p>We don't promise any search ranking, number of calls, or amount of revenue. Search engines and other third-party services are outside our control.</p>
+      <h3>11. Limit of liability</h3>
+      <p>To the extent the law allows, our total liability for any claim is limited to the amount you paid us for the work concerned, and we aren't liable for lost profits or indirect losses. Nothing here removes rights that the law says can't be removed.</p>
+      <h3>12. Governing law</h3>
+      <p>These terms are governed by the laws of <mark>[Governing law]</mark>. Any dispute goes first to a good-faith conversation between us, then to the courts of <mark>[Courts]</mark>.</p>
+      <h3>13. Changes to these terms</h3>
+      <p>We may update these terms and will change the date above. The terms in place when you approve your preview apply to your project.</p>
+      <h3>14. Contact</h3>
+      <p><mark>[Email address]</mark>, <mark>[Postal address]</mark>.</p>
+    </div>
+</dialog>
+<dialog class="legal-dialog" id="privacy-box" aria-labelledby="privacy-title">
+  <div class="legal-head"><h2 id="privacy-title">Privacy notice</h2><form method="dialog"><button class="legal-close" aria-label="Close privacy notice">✕</button></form></div>
+  <div class="legal-text">
+      <p>When you send a request, we collect what you enter in the form: your name, business name, trade, town, phone, email and website. We use it to build your preview and to contact you about it.</p>
+      <p>We keep requests for 1 year and then delete them. To see or delete your details, email <mark>[Email address]</mark>. We don't sell your details. We share them only with the services that run this website.</p>
+      <p>If we email you first, you can reply "no thanks" and we won't contact you again.</p>
+    </div>
+</dialog>
+
+<div class="sticky-cta"><a class="btn" href="contact.html#start">Get my free preview</a></div>
+
+<script src="sample.js?v=7"></script>
+<script src="app.js?v=7"></script>
+</body>
+</html>
