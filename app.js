@@ -84,7 +84,15 @@
         bad[0].focus();
         return;
       }
-      $("#ask-status").textContent = "This form isn't connected yet, so your request was not sent.";
+      // Opens the visitor's email app with the request filled in; they press send
+      const value = (name) => form.elements[name].value.trim();
+      const body = [
+        ["Business", "business"], ["Name", "name"], ["Trade", "trade"], ["Town", "town"],
+        ["Email", "email"], ["Phone", "phone"], ["Website", "website"], ["Plan", "plan"],
+      ].filter(([, name]) => value(name)).map(([label, name]) => `${label}: ${value(name)}`).join("\n");
+      const subject = `Free website preview: ${value("business")}`;
+      location.href = `mailto:info@marveloweb.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      $("#ask-status").innerHTML = 'Your email app should open with your request filled in. Press send to finish. If nothing opened, email us at <a href="mailto:info@marveloweb.com">info@marveloweb.com</a>.';
     });
   }
 
