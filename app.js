@@ -11,7 +11,7 @@
   // Where form requests go: the MarveloWeb CRM (Supabase). The publishable key is meant to be
   // public; it can only call the submit_website_lead function, which checks every field.
   const CRM = { url: "https://mdnymscknpjnpndmmhhg.supabase.co", key: "sb_publishable_qwsWkh154WNn5oWPKsho7A_QG_5I02o" };
-  const CONTACT_EMAIL = "info@marveloweb.com";
+  const CONTACT_EMAIL = "noa@marveloweb.com";
 
   // ----- Calls to action stay on the page when it has its own form -----
   const form = $("#ask");
