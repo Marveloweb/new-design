@@ -33,8 +33,8 @@ for (const file of fs.readdirSync(src("pages"))) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
 <link href="${FONTS}" rel="stylesheet">
-<link rel="stylesheet" href="sample.css?v=9">
-<link rel="stylesheet" href="styles.css?v=9">
+<link rel="stylesheet" href="sample.css?v=10">
+<link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body data-page="${page}">
 ${header}
@@ -42,8 +42,8 @@ ${header}
 ${body}
 </main>
 ${parts.footer}
-<script src="sample.js?v=9"></script>
-<script src="app.js?v=9"></script>
+<script src="sample.js?v=10"></script>
+<script src="app.js?v=10"></script>
 </body>
 </html>
 `;

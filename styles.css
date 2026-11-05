@@ -403,11 +403,10 @@ section { padding: clamp(64px, 8vw, 120px) var(--gutter); }
 .legal-text p { margin-top: 8px; }
 .legal-text ul { margin-top: 8px; padding-left: 22px; }
 .legal-text li { margin-top: 6px; }
-.legal-text a, .legal-id a { color: var(--accent-deep); }
+.legal-text a { color: var(--accent-deep); }
 .legal-page { background: var(--paper); }
 .legal-page h1 { font-size: clamp(38px, 6vw, 64px); }
 .legal-date { margin-top: 12px; color: var(--muted); }
-.legal-id { padding-top: 28px; padding-bottom: 28px; background: var(--mist); font-size: 16px; }
 .legal-text p:first-child { margin-top: 0; }
 
 .sticky-cta { display: none; }
