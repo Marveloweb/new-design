@@ -8,6 +8,11 @@
   const { TRADES, render } = window.MarveloSample;
   const KEYS = Object.keys(TRADES);
 
+  // Where form requests go: the MarveloWeb CRM (Supabase). The publishable key is meant to be
+  // public; it can only call the submit_website_lead function, which checks every field.
+  const CRM = { url: "https://mdnymscknpjnpndmmhhg.supabase.co", key: "sb_publishable_qwsWkh154WNn5oWPKsho7A_QG_5I02o" };
+  const CONTACT_EMAIL = "noah@marveloweb.com";
+
   // ----- Calls to action stay on the page when it has its own form -----
   const form = $("#ask");
   function goToForm() {
@@ -69,7 +74,7 @@
       }
       return ok;
     };
-    const fields = $$("input:not([type=hidden])", form);
+    const fields = $$("input:not([type=hidden]):not([name=company_url])", form);
     website.addEventListener("blur", () => { website.value = cleanDomain(website.value); });
     fields.forEach((field) => {
       field.addEventListener("input", () => { if (field.hasAttribute("aria-invalid")) check(field); });
@@ -84,15 +89,48 @@
         bad[0].focus();
         return;
       }
-      // Opens the visitor's email app with the request filled in; they press send
+      // Sends the request straight to the MarveloWeb CRM (new lead + email to the team)
       const value = (name) => form.elements[name].value.trim();
-      const body = [
-        ["Business", "business"], ["Name", "name"], ["Trade", "trade"], ["Town", "town"],
-        ["Email", "email"], ["Phone", "phone"], ["Website", "website"], ["Plan", "plan"],
-      ].filter(([, name]) => value(name)).map(([label, name]) => `${label}: ${value(name)}`).join("\n");
-      const subject = `Free website preview: ${value("business")}`;
-      location.href = `mailto:info@marveloweb.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      $("#ask-status").innerHTML = 'Your email app should open with your request filled in. Press send to finish. If nothing opened, email us at <a href="mailto:info@marveloweb.com">info@marveloweb.com</a>.';
+      const status = $("#ask-status");
+      const button = $("button[type=submit]", form);
+      const keys = ["business", "name", "trade", "town", "email", "phone", "website", "plan"];
+      const data = Object.fromEntries(keys.map((k) => [k, value(k)]));
+      data.page = document.body.dataset.page || "";
+      data.company_url = form.elements.company_url ? form.elements.company_url.value : "";
+
+      // If the CRM can't be reached, offer the email app as a backup
+      const mailtoHref = () => {
+        const body = [["Business", "business"], ["Name", "name"], ["Trade", "trade"], ["Town", "town"],
+          ["Email", "email"], ["Phone", "phone"], ["Website", "website"], ["Plan", "plan"]]
+          .filter(([, k]) => data[k]).map(([label, k]) => `${label}: ${data[k]}`).join("\n");
+        return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`Free website preview: ${data.business}`)}&body=${encodeURIComponent(body)}`;
+      };
+
+      button.disabled = true;
+      status.textContent = "Sending your request…";
+      fetch(`${CRM.url}/rest/v1/rpc/submit_website_lead`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", apikey: CRM.key },
+        body: JSON.stringify({ p: data }),
+      })
+        .then(async (res) => {
+          if (res.ok) {
+            form.reset();
+            status.innerHTML = `<strong>Thanks${data.name ? ", " + data.name.split(" ")[0].replace(/[<>&"]/g, "") : ""}! We've got your request.</strong> We'll send your free preview within 5 business days.`;
+            return;
+          }
+          let code = "";
+          try { code = (await res.json()).message || ""; } catch (_) {}
+          if (code === "rate_limited") {
+            status.textContent = "We already have your request and will be in touch soon.";
+          } else {
+            throw new Error(code || res.status);
+          }
+        })
+        .catch(() => {
+          status.innerHTML = `Sorry, that didn't go through. <a href="${mailtoHref()}">Email your request to us instead</a> and we'll take it from there.`;
+        })
+        .finally(() => { button.disabled = false; });
     });
   }
 
